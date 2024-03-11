@@ -4,13 +4,11 @@ import CategoryGridTile from "../components/CategoryGridTile"
 
 const CategoryScreen = ({ navigation }) => {
 
-
-
     const renderedItemHelper = (itemData) => {
         const item = itemData.item
 
         const mealsScreenNavigator = () => {
-            navigation.navigate("MealsScreen", {
+            navigation.navigate("MealOverView", {
                 mealId: item.id
             })
         }

@@ -1,6 +1,7 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack"
 import DrawerNavigator from "./DrawerNavigator"
-import MealsScreen from "../screens/MealsScreen"
+import MealOverView from "../screens/MealOverView"
+import MealDetail from "../screens/MealDetail"
 
 const StackNavigator = () => {
 
@@ -8,10 +9,11 @@ const StackNavigator = () => {
 
     return (
         <Stack.Navigator>
-            <Stack.Screen name="Categories" component={DrawerNavigator} options={{
+            <Stack.Screen name="CategoryDrawerScreen" component={DrawerNavigator} options={{
                 headerShown: false
             }} />
-            <Stack.Screen name="MealsScreen" component={MealsScreen} />
+            <Stack.Screen name="MealOverView" component={MealOverView} />
+            <Stack.Screen name="MealDetail" component={MealDetail} />
         </Stack.Navigator>
     )
 }
