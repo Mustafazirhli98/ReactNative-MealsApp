@@ -1,8 +1,8 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
 import CategoryScreen from './screens/CategoryScreen';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import StackNavigator from './navigations/StackNavigator';
 
 export default function App() {
 
@@ -12,9 +12,7 @@ export default function App() {
     <>
       <StatusBar style="auto" />
       <NavigationContainer>
-        <Stack.Navigator>
-          <Stack.Screen name='CategoryScreen' component={CategoryScreen} />
-        </Stack.Navigator>
+        <StackNavigator />
       </NavigationContainer>
     </>
   );
