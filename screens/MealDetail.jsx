@@ -1,21 +1,26 @@
-import { Image, StyleSheet, Text, View } from "react-native"
+import { Image, ScrollView, StyleSheet, Text, View } from "react-native"
 import { MEALS } from "../data/data"
+import List from "../components/List"
+import Subtitle from "../components/Subtitle"
+import { useLayoutEffect } from "react"
 
 const MealDetail = ({ navigation, route }) => {
     const selectedMealId = route.params.selectedMealId
     const mealDetail = MEALS.find(item => item.id === selectedMealId)
+
     return (
-        <View>
+
+        <ScrollView>
             <View>
-                <Image source={{ uri: mealDetail.imageUrl }} style={styles.img}/>
+                <Image source={{ uri: mealDetail.imageUrl }} style={styles.img} />
             </View>
             <View>
-                <Text>Ingredients</Text>
-                <Text></Text>
-                <Text>Steps</Text>
-                <Text></Text>
+                <Subtitle>Ingredients</Subtitle>
+                <List data={mealDetail.ingredients} align="center" />
+                <Subtitle>Steps</Subtitle>
+                <List data={mealDetail.steps} align="left" />
             </View>
-        </View>
+        </ScrollView >
     )
 }
 
