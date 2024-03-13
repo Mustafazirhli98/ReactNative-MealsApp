@@ -1,4 +1,5 @@
 import { ScrollView, StyleSheet, Text, View } from "react-native"
+import COLORS from "../constants/Colors"
 
 const List = ({ data, align }) => {
 
@@ -15,14 +16,14 @@ export default List
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: "#6a232d",
+        backgroundColor: COLORS.primaryBG,
         marginHorizontal: 10,
         marginVertical: 5,
         borderRadius: 8
     },
     text: {
         fontSize: 14,
-        color: "#E8D8C4",
+        color: COLORS.primaryTextCOLOR,
         padding: 10,
         lineHeight: 20
     }

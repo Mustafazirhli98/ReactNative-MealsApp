@@ -1,4 +1,5 @@
 import { StyleSheet, Text, View } from "react-native"
+import COLORS from "../constants/Colors"
 
 const DetailedInform = ({ complexity, affordability, duration }) => {
     return (
@@ -20,6 +21,6 @@ const styles = StyleSheet.create({
         padding: 3
     },
     text: {
-        color: "#5e5d5d"
+        color: COLORS.disabledCOLOR
     }
 })

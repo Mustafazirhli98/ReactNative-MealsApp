@@ -3,6 +3,7 @@ import { CATEGORIES } from "../data/data"
 import CategoryGridTile from "../components/CategoryGridTile"
 import { useLayoutEffect } from "react"
 import Star from "../components/icons/StarIcon"
+import COLORS from "../constants/Colors"
 
 const CategoryScreen = ({ navigation }) => {
 
@@ -39,6 +40,6 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         paddingTop: 10,
-        backgroundColor: "#f6e6d4"
+        backgroundColor: COLORS.secondaryBG
     }
 })

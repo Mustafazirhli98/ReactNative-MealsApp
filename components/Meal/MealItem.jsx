@@ -1,6 +1,7 @@
 import { Image, Platform, Pressable, StyleSheet, Text, View } from "react-native"
 import DetailedInform from "../DetailedInform"
 import { useNavigation } from "@react-navigation/native"
+import COLORS from "../../constants/Colors"
 
 const MealItem = ({ title, imageUrl, complexity, duration, affordability, id }) => {
 
@@ -39,9 +40,9 @@ const styles = StyleSheet.create({
         flex: 1,
         overflow: Platform.OS === "android" ? "hidden" : "visible",
         borderRadius: 8,
-        backgroundColor: "#fff",
+        backgroundColor: COLORS.WhiteCOLOR,
         elevation: 4,
-        shadowColor: "black",
+        shadowColor: COLORS.blackCOLOR,
         shadowOffset: { height: 2, width: 0 },
         shadowOpacity: 0.25,
         shadowRadius: 8
@@ -52,7 +53,7 @@ const styles = StyleSheet.create({
     innerContainer: {
         borderRadius: 8,
         borderWidth: 1,
-        borderColor: "#ccc",
+        borderColor: COLORS.softGrayCOLOR,
         overflow: "hidden",
     },
     img: {
@@ -66,7 +67,7 @@ const styles = StyleSheet.create({
         padding: 5
     },
     rippleColor: {
-        color: "#ccc"
+        color: COLORS.softGrayCOLOR
     },
     iosRipple: {
         opacity: Platform.OS === "ios" ? 0.25 : 1

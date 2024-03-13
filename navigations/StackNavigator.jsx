@@ -2,6 +2,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack"
 import DrawerNavigator from "./DrawerNavigator"
 import MealOverView from "../screens/MealOverView"
 import MealDetail from "../screens/MealDetail"
+import COLORS from "../constants/Colors"
 
 const StackNavigator = () => {
 
@@ -10,11 +11,11 @@ const StackNavigator = () => {
     return (
         <Stack.Navigator screenOptions={{
             headerStyle: {
-                backgroundColor: "#561C24",
+                backgroundColor: COLORS.headerBG,
             },
-            headerTintColor: "#E8D8C4",
+            headerTintColor: COLORS.primaryTextCOLOR,
             contentStyle: {
-                backgroundColor: "#E8D8C4"
+                backgroundColor: COLORS.primaryTextCOLOR,
             }
         }}>
             <Stack.Screen

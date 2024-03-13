@@ -1,27 +1,25 @@
 import { createDrawerNavigator } from "@react-navigation/drawer"
 import CategoryScreen from "../screens/CategoryScreen"
 import FavoritesScreen from "../screens/FavoritesScreen"
-import { useLayoutEffect } from "react"
-import Star from "../components/icons/StarIcon"
-import { Ionicons } from "@expo/vector-icons"
 import ListIcon from "../components/icons/ListIcon"
-import StarIcon from "../components/icons/StarIcon"
 import DrawerStarIcon from "../components/icons/DrawerStarIcon"
+import COLORS from "../constants/Colors"
+import TrashIcon from "../components/icons/TrashIcon"
 
-const DrawerNavigator = ({ navigation }) => {
+const DrawerNavigator = () => {
 
     const Drawer = createDrawerNavigator()
     return (
         <Drawer.Navigator screenOptions={{
             headerStyle: {
-                backgroundColor: "#561C24",
+                backgroundColor: COLORS.headerBG,
             },
-            headerTintColor: "#E8D8C4",
-            drawerActiveBackgroundColor: "#561C24",
-            drawerActiveTintColor: "#E8D8C4",
-            drawerInactiveTintColor: "#9d9b99",
+            headerTintColor: COLORS.primaryTextCOLOR,
+            drawerActiveBackgroundColor: COLORS.primaryTextCOLOR,
+            drawerActiveTintColor: COLORS.primaryBG,
+            drawerInactiveTintColor: COLORS.inactiveTintCOLOR,
             drawerStyle: {
-                backgroundColor: "#6D2932"
+                backgroundColor: COLORS.drawerBG
             }
         }}>
             <Drawer.Screen
@@ -41,7 +39,10 @@ const DrawerNavigator = ({ navigation }) => {
                     title: "My Favorites",
                     drawerIcon: ({ color, size }) => (
                         <DrawerStarIcon color={color} size={size} />
-                    )
+                    ),
+                    sceneContainerStyle: {
+                        backgroundColor: COLORS.secondaryBG
+                    }
                 }}
             />
         </Drawer.Navigator>

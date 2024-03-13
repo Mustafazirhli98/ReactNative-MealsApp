@@ -2,9 +2,9 @@ import { Ionicons } from "@expo/vector-icons"
 import { Pressable, StyleSheet } from "react-native"
 import { useDispatch } from "react-redux"
 import { addFavorite } from "../../store/favoriteSlice"
+import COLORS from "../../constants/Colors"
 
 const StarIcon = ({ onPress, shape }) => {
-
 
     return (
         <Pressable
@@ -13,7 +13,7 @@ const StarIcon = ({ onPress, shape }) => {
         >
             <Ionicons
                 name={shape ? "star" : "star-outline"}
-                color="#E8D8C4"
+                color={COLORS.addFavoriteCOLOR}
                 size={22} />
         </Pressable >
     )

@@ -1,4 +1,5 @@
 import { Platform, Pressable, StyleSheet, Text, View } from "react-native"
+import COLORS from "../constants/Colors"
 
 const CategoryGridTile = ({ title, color, onPress }) => {
 
@@ -19,11 +20,11 @@ const styles = StyleSheet.create({
     outerContainer: {
         flex: 1,
         height: 150,
-        margin: 16,
+        margin: 10,
         borderRadius: 8,
         overflow: Platform.OS === "android" ? "hidden" : "visible",
         elevation: 4,
-        shadowColor: "black",
+        shadowColor: COLORS.blackCOLOR,
         shadowOpacity: 0.25,
         shadowOffset: { height: 1, width: 1 },
         shadowRadius: 8
@@ -32,7 +33,7 @@ const styles = StyleSheet.create({
         flex: 1
     },
     rippleColor: {
-        color: "#ccc"
+        color: COLORS.softGrayCOLOR
     },
     innerContainer: {
         padding: 20,
