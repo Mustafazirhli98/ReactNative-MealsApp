@@ -14,7 +14,7 @@ const StarIcon = ({ onPress, shape }) => {
             <Ionicons
                 name={shape ? "star" : "star-outline"}
                 color={COLORS.addFavoriteCOLOR}
-                size={22} />
+                size={20} />
         </Pressable >
     )
 }

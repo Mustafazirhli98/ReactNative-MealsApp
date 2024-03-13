@@ -43,7 +43,7 @@ const FavoritesScreen = ({ navigation }) => {
                     onPress={favoriteData.length > 0 ? showDeleteAlert : showNoDataAlert} />
             ),
         })
-    }, [navigation])
+    }, [navigation, favoriteIds, favoriteData])
 
 
     return (
