@@ -20,14 +20,14 @@ const styles = StyleSheet.create({
     outerContainer: {
         flex: 1,
         height: 150,
-        margin: 10,
+        margin: 15,
         borderRadius: 8,
         overflow: Platform.OS === "android" ? "hidden" : "visible",
         elevation: 4,
         shadowColor: COLORS.blackCOLOR,
         shadowOpacity: 0.25,
         shadowOffset: { height: 1, width: 1 },
-        shadowRadius: 8
+        shadowRadius: 8,
     },
     button: {
         flex: 1

@@ -8,7 +8,7 @@ const COLORS = {
     primaryTextCOLOR: "#E8D8C4",
     secondaryBG: "#f6e6d4",
     headerBG: "#561C24",
-    inactiveTintCOLOR: "#9d9b99",
+    inactiveTintCOLOR: "#c1bfbd",
     drawerBG: "#6D2932"
 }
 

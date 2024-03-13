@@ -4,7 +4,6 @@ import FavoritesScreen from "../screens/FavoritesScreen"
 import ListIcon from "../components/icons/ListIcon"
 import DrawerStarIcon from "../components/icons/DrawerStarIcon"
 import COLORS from "../constants/Colors"
-import TrashIcon from "../components/icons/TrashIcon"
 
 const DrawerNavigator = () => {
 
@@ -51,4 +50,3 @@ const DrawerNavigator = () => {
 }
 
 export default DrawerNavigator
-
