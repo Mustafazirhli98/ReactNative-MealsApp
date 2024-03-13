@@ -2,7 +2,6 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack"
 import DrawerNavigator from "./DrawerNavigator"
 import MealOverView from "../screens/MealOverView"
 import MealDetail from "../screens/MealDetail"
-import StarIcon from "../components/icons/StarIcon"
 
 const StackNavigator = () => {
 
@@ -35,12 +34,6 @@ const StackNavigator = () => {
             <Stack.Screen
                 name="MealDetail"
                 component={MealDetail}
-                options={{
-                    title: "Meal Details",
-                    headerRight: ({ color, size }) => (
-                        <StarIcon color={color} size={size} />
-                    )
-                }}
             />
         </Stack.Navigator>
     )
